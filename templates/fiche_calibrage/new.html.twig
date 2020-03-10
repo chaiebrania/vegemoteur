@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New FicheCalibrage{% endblock %}
+
+{% block body %}
+    <h1>Ajouter Calibrage</h1>
+
+    {{ include('fiche_calibrage/_form.html.twig') }}
+
+    <a href="{{ path('fiche_calibrage_index') }}"class="btn btn-inverse">Retour </a>
+{% endblock %}

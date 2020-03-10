@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Piece{% endblock %}
+
+{% block body %}
+    <h1>Piece</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ piece.id }}</td>
+            </tr>
+            <tr>
+                <th>Code</th>
+                <td>{{ piece.code }}</td>
+            </tr>
+            <tr>
+                <th>Designation</th>
+                <td>{{ piece.designation }}</td>
+            </tr>
+            <tr>
+                <th>Lecture</th>
+                <td>{{ piece.lecture }}</td>
+            </tr>
+            <tr>
+                <th>Preci</th>
+                <td>{{ piece.preci }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ piece.type }}</td>
+            </tr>
+            <tr>
+                <th>Nserie</th>
+                <td>{{ piece.Nserie }}</td>
+            </tr>
+            <tr>
+                <th>Marque</th>
+                <td>{{ piece.marque }}</td>
+            </tr>
+            <tr>
+                <th>Section</th>
+                <td>{{ piece.section }}</td>
+            </tr>
+            <tr>
+                <th>Postetravaile</th>
+                <td>{{ piece.postetravaile }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ piece.date ? piece.date|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Frequencecalibrage</th>
+                <td>{{ piece.frequencecalibrage }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+   
+
+    <a href="{{ path('piece_edit', {'id': piece.id}) }}"class="btn btn-warning" >Modifier</a>
+     <a href="{{ path('piece_index') }}" class="btn btn-inverse">Retour</a>
+
+    {{ include('piece/_delete_form.html.twig') }}
+{% endblock %}

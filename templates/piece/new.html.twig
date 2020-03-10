@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Piece{% endblock %}
+
+{% block body %}
+   
+  
+    <h1>Ajouter piece</h1>
+                
+
+    {{ include('piece/_form.html.twig') }}
+<br>
+    <a href="{{ path('piece_index') }}" class="btn btn-inverse"> Retour</a>
+{% endblock %}

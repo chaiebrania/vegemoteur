@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Fiche Vie{% endblock %}
+
+{% block body %}
+ 
+    <h1>Modifier Fiche De Vie</h1>
+
+             
+    {{ include('fiche_vie/_form.html.twig', {'button_label': 'Modifier'}) }}
+    {{ include('fiche_vie/_delete_form.html.twig') }}
+    <a href="{{ path('fiche_vie_index') }}">Retour</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Fiche Vie{% endblock %}
+
+{% block body %}
+    <h1>Nouveau Fiche Vie</h1>
+
+    {{ include('fiche_vie/_form.html.twig') }}
+
+    <a href="{{ path('fiche_vie_index') }}" class="btn btn-inverse">Retour</a>
+{% endblock %}

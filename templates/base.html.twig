@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+          <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}">
+          <link rel="stylesheet" type="text/css" href="{{asset('assets/css/themify-icons.css')}}">
+          <link rel="stylesheet" type="text/css" href="{{asset('assets/css/feather.css')}}">
+          <link rel="stylesheet" type="text/css" href="{{asset('assets/css/component.css')}}">
+          <link rel="stylesheet" type="text/css" href="{{asset('assets/css/dataTables.bootstrap4.min.css')}}">
+          <link rel="stylesheet" type="text/css" href="{{asset('assets/css/buttons.dataTables.min.css')}}">
+          <link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.bootstrap4.min.css')}}">
+          <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
+          <link rel="stylesheet" type="text/css" href="{{asset('assets/css/jquery.mCustomScrollbar.css')}}">
+        {% endblock %}
+    </head>
+    <body>
+     <div class="theme-loader">
+   <div class="ball-scale">
+      <div class='contain'>
+         <div class="ring">
+            <div class="frame"></div>
+         </div>
+         <div class="ring">
+            <div class="frame"></div>
+         </div>
+         <div class="ring">
+            <div class="frame"></div>
+         </div>
+         <div class="ring">
+            <div class="frame"></div>
+         </div>
+         <div class="ring">
+            <div class="frame"></div>
+         </div>
+         <div class="ring">
+            <div class="frame"></div>
+         </div>
+         <div class="ring">
+            <div class="frame"></div>
+         </div>
+         <div class="ring">
+            <div class="frame"></div>
+         </div>
+         <div class="ring">
+            <div class="frame"></div>
+         </div>
+         <div class="ring">
+            <div class="frame"></div>
+         </div>
+      </div>
+   </div>
+</div>
+<div id="pcoded" class="pcoded">
+   <div class="pcoded-overlay-box"></div>
+   <div class="pcoded-container navbar-wrapper">
+      <nav class="navbar header-navbar pcoded-header">
+         <div class="navbar-wrapper">
+            <div class="navbar-logo">
+               <a class="mobile-menu" id="mobile-collapse" href="#!">
+               <i class="feather icon-menu"></i>
+               </a>
+               <a href="index.html">
+               <img class="img-fluid" src="{{asset('assets/images/vege1.png')}}" alt="Theme-Logo" />
+               </a>
+               <a class="mobile-options">
+               <i class="feather icon-more-horizontal"></i>
+               </a>
+            </div>
+           
+         </div>
+      </nav>
+       <div class="pcoded-main-container">
+         <div class="pcoded-wrapper">
+            <nav class="pcoded-navbar">
+               <div class="pcoded-inner-navbar main-menu">
+                  <ul class="pcoded-item pcoded-left-item">
+                   
+                       <li class="">
+                        <a href="{{ path('piece_index') }}">
+                        <span class="pcoded-micon"><i class="feather icon-paper"></i></span>
+                        <span class="pcoded-mtext">Liste de suivi des instruments</span>
+                        </a>
+                     </li>
+                       <li class="">
+                        <a href="{{ path('fiche_vie_index') }}">
+                        <span class="pcoded-micon"><i class="feather icon-paper"></i></span>
+                        <span class="pcoded-mtext">Fiche Vie</span>
+                        </a>
+                     </li>
+                       <li class="">
+                        <a href="{{ path('fiche_calibrage_index') }}">
+                        <span class="pcoded-micon"><i class="feather icon-paper"></i></span>
+                        <span class="pcoded-mtext">Fiche Calibrage</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+            <div class="pcoded-content">
+               <div class="pcoded-inner-content">
+                  <div class="main-body">
+                     {% block body %}{% endblock %}      
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+      
+        {% block javascripts %}
+
+        <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery-ui.min.js')}}"></script>
+<script src="{{asset('assets/js/popper.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+
+<script src="{{asset('assets/js/jquery.slimscroll.js')}}"></script>
+ 
+<script src="{{asset('assets/js/modernizr.js')}}"></script>
+<script src="{{asset('assets/js/css-scrollbars.js')}}"></script>
+<script src="{{asset('assets/js/pcoded.min.js')}}"> </script>
+<script src="{{asset('assets/js/vartical-layout.min.js')}}"> </script>
+<script src="{{asset('assets/js/jquery.mCustomScrollbar.concat.min.js')}}" ></script>
+
+<script src="{{asset('assets/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/js/dataTables.buttons.min.js')}}"></script>
+<script src="{{asset('assets/js/data-table-custom.js')}}"></script>
+<script src="{{asset('assets/js/script.js')}}"></script>
+
+
+        {% endblock %}
+    </body>
+</html>

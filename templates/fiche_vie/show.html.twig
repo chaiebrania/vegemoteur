@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fiche De Vie{% endblock %}
+
+{% block body %}
+    <h1>Fiche De Vie</h1>
+    
+<div class="card">
+      <div class="card-block accordion-block">
+         <div id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="accordion-panel">
+               <div class="accordion-heading" role="tab" id="headingOne">
+                  <h3 class="card-title accordion-title">
+                     <a class="accordion-msg scale_active collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                     detail
+                     </a>
+                  </h3>
+               </div>
+               <div id="collapseOne" class="panel-collapse in collapse" role="tabpanel" aria-labelledby="headingOne" style="">
+                  <div class="accordion-content accordion-desc">
+                  
+                     <ul>
+                     <li>code :{{ fiche_vie.piece.code }}</li> 
+                       <li>designation :{{ fiche_vie.piece.designation }}</li>
+                       <li>lecture :{{ fiche_vie.piece.lecture }}</li>
+                  </ul>
+                    
+                  </div>
+               </div>
+            </div>
+            
+      </div>
+   </div>
+   <br><br><br>
+    <table class="table">
+        <tbody> 
+            <tr>
+                <th>Nature de l'intervention</th>
+                <td>{{ fiche_vie.nateintervention }}</td>
+            </tr>
+            <tr>
+                <th>Réf.Document</th>
+                <td>{{ fiche_vie.refdocument }}</td>
+            </tr>
+            <tr>
+                <th>Resultat</th>
+                <td>{{ fiche_vie.resultat }}</td>
+            </tr>
+            <tr>
+                <th>Visa</th>
+                <td>{{ fiche_vie.visa }}</td>
+            </tr>
+             <tr>
+                <th>Date</th>
+                <td>{{ fiche_vie.date ? fiche_vie.date|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <a href="{{ path('fiche_vie_index') }}" class="btn btn-inverse">Retour</a>
+
+    <a href="{{ path('fiche_vie_edit', {'id': fiche_vie.id}) }}" class="btn btn-primary">Modifier</a>
+
+    {{ include('fiche_vie/_delete_form.html.twig') }}
+{% endblock %}
